@@ -8,3 +8,4 @@ class Room:
         self.items = items
     def __repr__(self):
         return f"{self.name}, {self.description}"
+        
