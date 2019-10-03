@@ -59,15 +59,16 @@ def try_direction(direction, room):
     else:
         print("you cant go that way")
         return room 
-
-while True:
+is_running = True
+while is_running:
     print(player.room.name)
     print(player.room.description)
+    print(player.room.items)
 
-    user_input = input("\n> ").lower().split()
+    user_input = input("\n> ").split()
 
-    if user_input == "q":
-        break
+    if user_input.index("q") == 0:
+        is_running = False
         
     elif len(user_input) == 1:
         user_input = user_input[0][0]
